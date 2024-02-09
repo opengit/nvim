@@ -3,8 +3,8 @@
 
 ## Screenshots
 
-![avatar](./docs/images/start-screen.png)
+![start-screen](./docs/images/start-screen.png)
 
-![avatar](./docs/images/float-term.png)
+![float-term](./docs/images/float-term.png)
 
-![avatar](./docs/images/cmdline.png)
+![cmdline](./docs/images/cmdline.png)

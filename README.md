@@ -1,0 +1,2 @@
+# ReadMe
+## my neovim configuration

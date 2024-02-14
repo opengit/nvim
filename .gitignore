@@ -3,6 +3,8 @@
 .backup
 .swp
 
+# some files
+.DS_Store
 # Compiled Lua sources
 luac.out
 

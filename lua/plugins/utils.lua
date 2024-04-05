@@ -1,5 +1,16 @@
 return {
-	{ "rcarriga/nvim-notify" },
+	{
+		"rcarriga/nvim-notify",
+		config = function()
+			require("notify").setup({
+				max_width = 60,
+				stages = "static",
+				timeout = 1000,
+				render = "wrapped-compact",
+				top_down = true,
+			})
+		end,
+	},
 
 	-- resize the window
 	{

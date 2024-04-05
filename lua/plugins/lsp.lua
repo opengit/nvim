@@ -108,12 +108,18 @@ return {
 				automatic_setup = true,
 				-- ensure_installed = { "shfmt", "prettier", "stylua", "black", "isort", "flake8" },
 				ensure_installed = { "shfmt", "prettier", "stylua" },
+				-- ensure_installed = { "shfmt", "prettier", "stylua" },
 				handlers = {
 					-- flake8 = function(source_name, methods)
 					-- 	null_ls.register(null_ls.builtins.diagnostics.flake8.with({
 					-- 		extra_args = { "--max-line-length", "88" },
 					-- 	}))
 					-- end,
+					prettier = function(source_name, methods)
+						null_ls.register(null_ls.builtins.formatting.prettier.with({
+							extra_args = { "--tab-width", "2" },
+						}))
+					end,
 				},
 			})
 		end,

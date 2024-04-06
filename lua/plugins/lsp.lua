@@ -55,14 +55,15 @@ return {
 	},
 
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		-- "jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local null_ls = require("null-ls")
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 			null_ls.setup({
-				border = "rounded",
+				border = "none",
 				cmd = { "nvim" },
 				debounce = 250,
 				debug = false,
@@ -80,18 +81,18 @@ return {
 				temp_dir = nil,
 				update_in_insert = false,
 				-- formatting on save
-				-- on_attach = function(client, bufnr)
-				-- 	if client.supports_method("textDocument/formatting") then
-				-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-				-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-				-- 			group = augroup,
-				-- 			buffer = bufnr,
-				-- 			callback = function()
-				-- 				vim.lsp.buf.format({ bufnr = bufnr })
-				-- 			end,
-				-- 		})
-				-- 	end
-				-- end,
+				on_attach = function(client, bufnr)
+					if client.supports_method("textDocument/formatting") then
+						vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							group = augroup,
+							buffer = bufnr,
+							callback = function()
+								vim.lsp.buf.format({ bufnr = bufnr })
+							end,
+						})
+					end
+				end,
 			}) -- end of setup
 		end,
 	},
@@ -100,7 +101,8 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
-			"jose-elias-alvarez/null-ls.nvim",
+			-- "jose-elias-alvarez/null-ls.nvim",
+			"nvimtools/none-ls.nvim",
 		},
 		config = function()
 			local null_ls = require("null-ls")
@@ -108,7 +110,14 @@ return {
 				automatic_setup = true,
 				-- ensure_installed = { "shfmt", "prettier", "stylua", "black", "isort", "flake8" },
 				-- ensure_installed = { "shfmt", "stylua" },
-				ensure_installed = { "shfmt", "prettier", "stylua" },
+				ensure_installed = {
+					"shfmt",
+					"prettier",
+					"typescript-language-server",
+					"ruff-lsp",
+					"jedi-language-server",
+					"stylua",
+				},
 				handlers = {
 					-- flake8 = function(source_name, methods)
 					-- 	null_ls.register(null_ls.builtins.diagnostics.flake8.with({
@@ -122,15 +131,32 @@ return {
 					-- end,
 					prettier = function(source_name, methods)
 						null_ls.register(null_ls.builtins.formatting.prettier.with({
-							extra_args = function(params)
-								return params.options
-									and params.options.tabSize
-									and {
-										"--tab-width",
-										"4",
-										-- params.options.tabSize,
-									}
-							end,
+							filetypes = {
+								"javascript",
+								"javascriptreact",
+								"typescript",
+								"typescriptreact",
+								"vue",
+								"css",
+								"scss",
+								"html",
+								"json",
+								"yaml",
+								"markdown",
+								"graphql",
+								"md",
+								"txt",
+							},
+							extra_args = { "--tab-width", "4" },
+							-- extra_args = function(params)
+							-- 	return params.options
+							-- 		and params.options.tabSize
+							-- 		and {
+							-- 			"--tab-width",
+							-- 			"4",
+							-- 			-- params.options.tabSize,
+							-- 		}
+							-- end,
 						}))
 					end,
 				},

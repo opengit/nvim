@@ -8,46 +8,47 @@ return {
 	},
 
 	-- auto-pairs
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({
-				enable_check_bracket_line = false,
-				ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
-			})
-		end,
-	},
+	-- {
+	-- 	"windwp/nvim-autopairs",
+	-- 	config = function()
+	-- 		require("nvim-autopairs").setup({
+	-- 			enable_check_bracket_line = false,
+	-- 			map_cr = false,
+	-- 			ignored_next_char = "[%w%.]", -- will ignore alphanumeric and `.` symbol
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- auto completion
-	{
-		"hrsh7th/nvim-cmp",
-		config = function()
-			require("plugins/autocmp/config")()
-		end,
-	},
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-path" },
-	{ "hrsh7th/cmp-cmdline" },
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	config = function()
+	-- 		require("plugins/autocmp/config")()
+	-- 	end,
+	-- },
+	-- { "hrsh7th/cmp-nvim-lsp" },
+	-- { "hrsh7th/cmp-buffer" },
+	-- { "hrsh7th/cmp-path" },
+	-- { "hrsh7th/cmp-cmdline" },
 
-	{ "dcampos/cmp-snippy" },
+	-- { "dcampos/cmp-snippy" },
 	{ "honza/vim-snippets" },
-	{
-		"dcampos/nvim-snippy",
-		config = function()
-			require("snippy").setup({
-				mappings = {
-					is = {
-						["<Tab>"] = "expand_or_advance",
-						["<S-Tab>"] = "previous",
-					},
-					nx = {
-						["<leader>x"] = "cut_text",
-					},
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"dcampos/nvim-snippy",
+	-- 	config = function()
+	-- 		require("snippy").setup({
+	-- 			mappings = {
+	-- 				is = {
+	-- 					["<Tab>"] = "expand_or_advance",
+	-- 					["<S-Tab>"] = "previous",
+	-- 				},
+	-- 				nx = {
+	-- 					["<leader>x"] = "cut_text",
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	{ "onsails/lspkind.nvim" }, -- icons in autocomplete source
 

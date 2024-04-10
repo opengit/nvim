@@ -62,7 +62,7 @@ return {
 			})
 		end,
 	},
-	-- --------------------------------------------------------------------------------------------------------------
+	--------------------------------------------------------------------------------------------------------------
 	{
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
@@ -80,6 +80,7 @@ return {
 			vim.keymap.set("i", "<C-x>", function()
 				return vim.fn["codeium#Clear"]()
 			end, { expr = true })
+			vim.g.codeium_no_map_tab = true
 		end,
 	},
 	-- --------------------------------------------------------------------------------------------------------------
@@ -108,8 +109,8 @@ return {
 				cmdline = {
 					enabled = true,
 					-- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
-					-- view = "cmdline_popup",
-					view = "cmdline",
+					view = "cmdline_popup",
+					-- view = "cmdline",
 				},
 				-- you can enable a preset for easier configuration
 				presets = {

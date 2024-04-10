@@ -4,6 +4,7 @@
 return {
 	-- The default '<leader>' is the space.
 	leader = " ",
+	-- leader = ",",
 
 	-- Use the shortcut to switch/jump window.
 	jump_left_window = "<C-h>",

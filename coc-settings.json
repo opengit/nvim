@@ -1,0 +1,131 @@
+{
+    //////////////////////////////////////////////////////////////////////////////////
+    // normal
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.messageLevel": "error",
+    "coc.preferences.enableMarkdown": false,
+    "coc.preferences.formatOnSave": true,
+    "signature.target": "float",
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // dialog
+    "dialog.rounded": true,
+    "dialog.floatHighlight": "CocFloating",
+    "dialog.floatBorderHighlight": "CocFloating",
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // suggest
+    "suggest.timeout": 3000,
+    "suggest.noselect": true,
+    "suggest.triggerCompletionWait": 1,
+    "suggest.maxCompleteItemCount": 36,
+    "suggest.autoTrigger": "always",
+    "suggest.minTriggerInputLength": 1,
+    "suggest.localityBonus": true,
+    "suggest.formatItems": ["abbr", "menu", "kind"],
+    "suggest.completionItemKindLabels": {
+        "constructor": "\ufb25",
+        "keyword": "\uf1de",
+        "variable": "\ue79b",
+        "value": "\uf89f",
+        "operator": "\u03a8",
+        "function": "\u0192",
+        "reference": "\ufa46",
+        "constant": "\uf8fe",
+        "method": "\uf09a",
+        "struct": "\ufb44",
+        "class": "\uf0e8",
+        "interface": "\uf417",
+        "text": "\ue612",
+        "enum": "\uf435",
+        "enumMember": "\uf02b",
+        "module": "\uf40d",
+        "color": "\ue22b",
+        "property": "\ue624",
+        "field": "\uf9be",
+        "unit": "\uf475",
+        "event": "\ufacd",
+        "file": "\uf723",
+        "folder": "\uf114",
+        "snippet": "\ue60b",
+        "typeParameter": "\uf728",
+        "default": " "
+    },
+    "suggest.enableFloat": true,
+    "suggest.floatConfig": {
+        "border": true,
+        "rounded": true,
+        "highlight": "CocFloating"
+    },
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // coc-ruff
+    "ruff.enable": true,
+    "ruff.useDetectRuffCommand": false,
+    "ruff.disableDocumentFormatting": false,
+    "ruff.enableExperimentalFormatter": true,
+    "ruff.autoFixOnSave": false,
+
+    // coc-jedi
+    "jedi.enable": true,
+    "jedi.startupMessage": false,
+    "jedi.trace.server": "off",
+    "jedi.jediSettings.autoImportModules": [],
+    "jedi.jediSettings.caseInsensitiveCompletion": false,
+    "jedi.diagnostics.enable": false,
+    "jedi.hover.enable": true,
+    "jedi.workspace.symbols.maxSymbols": 20,
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // coc-prettier
+    "prettier.enable": true,
+    "prettier.tabWidth": 4,
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // coc-tsserver
+    "typescript.format.enable": false,
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // diagnostic
+    "diagnostic.floatConfig": {
+        "border": true,
+        "rounded": true,
+        "highlight": "CocFloating"
+    },
+    "diagnostic.errorSign": "\uf467",
+    "diagnostic.warningSign": "\uf071",
+    "diagnostic.infoSign": "\uf129",
+    "diagnostic.hintSign": "\uf864",
+    "diagnostic.checkCurrentLine": true,
+
+    // coc-emmet
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact",
+        "typescript.jsx": "typescriptreact",
+        "javascript.jsx": "javascriptreact",
+        "tsx": "typescript.tsx",
+        "jsx": "javascript.tsx",
+        "js": "typescriptreact"
+    },
+
+    // CocOutline
+    "outline.sortBy": "position",
+    "outline.followCursor": true,
+    "outline.autoWidth": true,
+    "outline.autoPreview": true,
+    "outline.expandLevel": 4,
+    "list.source.symbols.defaultArgs": ["all"],
+
+    // coc-explorer
+    "explorer.git.enable": true,
+    "explorer.file.showHiddenFiles": true,
+    "explorer.file.reveal.auto": true,
+    "explorer.icon.source": "vim-devicons",
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": "labeling",
+    "explorer.enableFloatinput": true,
+
+    // ultisnips
+    "snippets.ultisnips.pythonPrompt": false
+}

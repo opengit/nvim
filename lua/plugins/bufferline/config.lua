@@ -13,7 +13,7 @@ return function()
 				icon = "▎", -- this should be omitted if indicator style is not 'icon'
 				style = "icon",
 			},
-			diagnostics = "nvim_lsp",
+			-- diagnostics = "nvim_lsp",
 			diagnostics_update_in_insert = false,
 			offsets = {
 				{

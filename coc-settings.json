@@ -16,7 +16,7 @@
     //////////////////////////////////////////////////////////////////////////////////
     // suggest
     "suggest.timeout": 3000,
-    "suggest.noselect": true,
+    "suggest.noselect": false,
     "suggest.triggerCompletionWait": 1,
     "suggest.maxCompleteItemCount": 36,
     "suggest.autoTrigger": "always",
@@ -66,15 +66,26 @@
     "ruff.enableExperimentalFormatter": true,
     "ruff.autoFixOnSave": false,
 
+    //////////////////////////////////////////////////////////////////////////////////
     // coc-jedi
-    "jedi.enable": true,
-    "jedi.startupMessage": false,
-    "jedi.trace.server": "off",
-    "jedi.jediSettings.autoImportModules": [],
-    "jedi.jediSettings.caseInsensitiveCompletion": false,
-    "jedi.diagnostics.enable": false,
-    "jedi.hover.enable": true,
-    "jedi.workspace.symbols.maxSymbols": 20,
+    // "jedi.enable": true,
+    // "jedi.startupMessage": false,
+    // "jedi.trace.server": "off",
+    // "jedi.jediSettings.autoImportModules": [],
+    // "jedi.jediSettings.caseInsensitiveCompletion": false,
+    // "jedi.diagnostics.enable": false,
+    // "jedi.hover.enable": true,
+    // "jedi.workspace.symbols.maxSymbols": 20,
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // coc-pyright
+    "pyright.enable": true,
+    "python.analysis.autoSearchPaths": true,
+    "pyright.trace.server": "off",
+    "python.venvPath": "~/Works/miniconda3/envs/",
+    "pyright.disableDiagnostics": true,
+    "python.linting.enabled": false,
+    "python.formatting.provider": "none",
 
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier

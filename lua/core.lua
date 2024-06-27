@@ -34,6 +34,8 @@ local function set_keymap()
 
 	-- Supported by bufferline
 	map("n", keys.pick_tab, ":BufferLinePick<CR>", option)
+	map("n", keys.previous_tab, ":bp<CR>", option)
+	map("n", keys.next_tab, ":bn<CR>", option)
 
 	-- Supported by nvim-tree
 	map("n", keys.file_explorer, ":Neotree position=left source=filesystem action=show toggle=true<CR>", option)

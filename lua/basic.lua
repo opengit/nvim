@@ -25,9 +25,11 @@ vim.opt.laststatus = 3
 -- vim.o.guifont = "GoMono Nerd Font:h10:#Bold"
 -- vim.o.guifont = "BlexMono Nerd Font Mono:h10"
 if vim.loop.os_uname().sysname == "Darwin" then
-	vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
+	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
+	vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h12"
 else
-	vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
+	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
+	vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
 end
 vim.opt.ttyfast = true -- faster redrawing
 vim.opt.linespace = 0

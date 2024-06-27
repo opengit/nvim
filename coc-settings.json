@@ -6,13 +6,11 @@
     "coc.preferences.enableMarkdown": false,
     "coc.preferences.formatOnSave": true,
     "signature.target": "float",
-
     //////////////////////////////////////////////////////////////////////////////////
     // dialog
     "dialog.rounded": true,
     "dialog.floatHighlight": "CocFloating",
     "dialog.floatBorderHighlight": "CocFloating",
-
     //////////////////////////////////////////////////////////////////////////////////
     // suggest
     "suggest.timeout": 3000,
@@ -57,15 +55,13 @@
         "rounded": true,
         "highlight": "CocFloating"
     },
-
     //////////////////////////////////////////////////////////////////////////////////
     // coc-ruff
     "ruff.enable": true,
-    "ruff.useDetectRuffCommand": false,
+    "ruff.useDetectRuffCommand": true,
     "ruff.disableDocumentFormatting": false,
     "ruff.enableExperimentalFormatter": true,
-    "ruff.autoFixOnSave": false,
-
+    "ruff.autoFixOnSave": true,
     //////////////////////////////////////////////////////////////////////////////////
     // coc-jedi
     // "jedi.enable": true,
@@ -76,26 +72,22 @@
     // "jedi.diagnostics.enable": false,
     // "jedi.hover.enable": true,
     // "jedi.workspace.symbols.maxSymbols": 20,
-
     //////////////////////////////////////////////////////////////////////////////////
     // coc-pyright
     "pyright.enable": true,
     "python.analysis.autoSearchPaths": true,
     "pyright.trace.server": "off",
-    "python.venvPath": "~/Works/miniconda3/envs/",
+    // "python.venvPath": "~/Works/miniconda3/envs/",
     "pyright.disableDiagnostics": true,
     "python.linting.enabled": false,
     "python.formatting.provider": "none",
-
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier
     "prettier.enable": true,
     "prettier.tabWidth": 4,
-
     //////////////////////////////////////////////////////////////////////////////////
     // coc-tsserver
     "typescript.format.enable": false,
-
     //////////////////////////////////////////////////////////////////////////////////
     // diagnostic
     "diagnostic.floatConfig": {
@@ -108,7 +100,6 @@
     "diagnostic.infoSign": "\uf129",
     "diagnostic.hintSign": "\uf864",
     "diagnostic.checkCurrentLine": true,
-
     // coc-emmet
     "emmet.includeLanguages": {
         "vue-html": "html",
@@ -119,7 +110,6 @@
         "jsx": "javascript.tsx",
         "js": "typescriptreact"
     },
-
     // CocOutline
     "outline.sortBy": "position",
     "outline.followCursor": true,
@@ -127,7 +117,6 @@
     "outline.autoPreview": true,
     "outline.expandLevel": 4,
     "list.source.symbols.defaultArgs": ["all"],
-
     // coc-explorer
     "explorer.git.enable": true,
     "explorer.file.showHiddenFiles": true,
@@ -136,7 +125,6 @@
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": "labeling",
     "explorer.enableFloatinput": true,
-
     // ultisnips
     "snippets.ultisnips.pythonPrompt": false
 }

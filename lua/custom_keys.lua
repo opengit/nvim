@@ -15,6 +15,8 @@ return {
 	-- View other usage of the plugin: https://github.com/akinsho/bufferline.nvim
 	-- Use the shortcut to pick a buffer tab.
 	pick_tab = "<leader>tt",
+	previous_tab = "<A-h>",
+	next_tab = "<A-l>",
 
 	-- View other usage of the plugin: https://github.com/nvim-neo-tree/neo-tree.nvim
 	-- Use the shortcut to open or close file explorer.
@@ -66,7 +68,8 @@ return {
 	goto_impl = "gi",
 	-- goto_back           = "<C-o>",
 	-- Use the shortcut to rename the code symbols.
-	lsp_rename = "<leader>re",
+	-- lsp_rename = "<leader>re",
+	lsp_rename = "<leader>rn",
 	-- Use the shortcut to format your codes.
 	format = "<leader>ft",
 }

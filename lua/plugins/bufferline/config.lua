@@ -3,8 +3,8 @@ return function()
 	bufferline.setup({
 		options = {
 			mode = "buffers", -- set to "tabs" to only show tabpages instead
-			-- style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
-			style_preset = bufferline.style_preset.minimal,
+			style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
+			-- style_preset = bufferline.style_preset.minimal,
 			themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
 			-- numbers = function(opts)
 			-- 	return string.format("%s·%s", opts.raise(opts.id), opts.lower(opts.ordinal))

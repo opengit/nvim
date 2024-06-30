@@ -175,8 +175,8 @@ return {
 		end,
 	},
 	-- --------------------------------------------------------------------------------------------------------------
-	-- make the use of templates.
-	-- add this to your lua/plugins.lua, lua/plugins/init.lua,  or the file you keep your other plugins:
+	-- Smart and Powerful commenting plugin for neovim.
+	-- Shortcuts: gcc | gbc | [count]gcc | [count]gbc
 	{
 		"numToStr/Comment.nvim",
 		opts = {

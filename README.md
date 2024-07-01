@@ -11,7 +11,7 @@ In my development environment, I will install the following plugins:
 If the support of Python is not enough, it is necessary to install pylsp server:
 
 ```Bash
-CocCommand pylsp.installServer
+:CocCommand pylsp.installServer
 ```
 
 ## Screenshots

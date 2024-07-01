@@ -5,13 +5,13 @@
 In my development environment, I will install the following plugins:
 
 ```Bash
-:CocInstall coc-pyright @yaegassy/coc-ruff coc-pairs coc-prettier coc-tsserver coc-json
+:CocInstall @yaegassy/coc-pylsp coc-html-css-support coc-pairs coc-prettier coc-tsserver coc-json coc-emmet coc-markdown-preview-enhanced coc-markdownlint
 ```
 
-To support the normal development of Python, it is necessary to install `ruff-lsp`:
+If the support of Python is not enough, it is necessary to install pylsp server:
 
 ```Bash
-:CocCommand ruff.builtin.installServer
+CocCommand pylsp.installServer
 ```
 
 ## Screenshots
@@ -26,8 +26,12 @@ To support the normal development of Python, it is necessary to install `ruff-ls
 
 -   2024-04-11 00:23
 
-*   从`nvim-lspconfig`迁移至`coc.nvim`。
+> 从`nvim-lspconfig`迁移至`coc.nvim`。
 
 -   2024-06-27 16:39
 
-*   完善了一下使用文档。
+> 完善了一下使用文档。
+
+-   2024-07-02 01:09
+
+> Python 的支持转为使用`coc-pylsp`。

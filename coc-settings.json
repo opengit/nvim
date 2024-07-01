@@ -56,31 +56,8 @@
         "highlight": "CocFloating"
     },
     //////////////////////////////////////////////////////////////////////////////////
-    // coc-ruff
-    "ruff.enable": true,
-    "ruff.useDetectRuffCommand": true,
-    "ruff.disableDocumentFormatting": false,
-    "ruff.enableExperimentalFormatter": true,
-    "ruff.autoFixOnSave": true,
-    //////////////////////////////////////////////////////////////////////////////////
-    // coc-jedi
-    // "jedi.enable": true,
-    // "jedi.startupMessage": false,
-    // "jedi.trace.server": "off",
-    // "jedi.jediSettings.autoImportModules": [],
-    // "jedi.jediSettings.caseInsensitiveCompletion": false,
-    // "jedi.diagnostics.enable": false,
-    // "jedi.hover.enable": true,
-    // "jedi.workspace.symbols.maxSymbols": 20,
-    //////////////////////////////////////////////////////////////////////////////////
-    // coc-pyright
-    "pyright.enable": true,
-    "python.analysis.autoSearchPaths": true,
-    "pyright.trace.server": "off",
-    // "python.venvPath": "~/Works/miniconda3/envs/",
-    "pyright.disableDiagnostics": true,
-    "python.linting.enabled": false,
-    "python.formatting.provider": "none",
+    // coc-pylsp
+    "pylsp.builtin.installExtrasArgs": ["all"],
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier
     "prettier.enable": true,
@@ -116,15 +93,5 @@
     "outline.autoWidth": true,
     "outline.autoPreview": true,
     "outline.expandLevel": 4,
-    "list.source.symbols.defaultArgs": ["all"],
-    // coc-explorer
-    "explorer.git.enable": true,
-    "explorer.file.showHiddenFiles": true,
-    "explorer.file.reveal.auto": true,
-    "explorer.icon.source": "vim-devicons",
-    "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": "labeling",
-    "explorer.enableFloatinput": true,
-    // ultisnips
-    "snippets.ultisnips.pythonPrompt": false
+    "list.source.symbols.defaultArgs": ["all"]
 }

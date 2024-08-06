@@ -39,8 +39,8 @@ return {
 				contrast = "soft",
 			})
 			-- or "light" for light mode
-			vim.o.background = "dark"
-			vim.cmd("colorscheme gruvbox")
+			-- vim.o.background = "light"
+			-- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
@@ -48,7 +48,8 @@ return {
 		priority = 1000,
 		config = function()
 			-- vim.g.gruvbox_baby_background_color = "dark"
-			-- vim.cmd("colorscheme gruvbox-baby")
+			vim.g.gruvbox_baby_background_color = "medium"
+			vim.cmd[[colorscheme gruvbox-baby]]
 		end,
 	},
 	{

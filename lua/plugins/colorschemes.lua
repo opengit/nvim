@@ -34,10 +34,10 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			require("gruvbox").setup({
-				-- can be "hard", "soft" or empty string
-				contrast = "soft",
-			})
+			-- require("gruvbox").setup({
+			-- 	-- can be "hard", "soft" or empty string
+			-- 	contrast = "soft",
+			-- })
 			-- or "light" for light mode
 			-- vim.o.background = "light"
 			-- vim.cmd("colorscheme gruvbox")
@@ -48,8 +48,8 @@ return {
 		priority = 1000,
 		config = function()
 			-- vim.g.gruvbox_baby_background_color = "dark"
-			vim.g.gruvbox_baby_background_color = "medium"
-			vim.cmd[[colorscheme gruvbox-baby]]
+			-- vim.g.gruvbox_baby_background_color = "medium"
+			-- vim.cmd[[colorscheme gruvbox-baby]]
 		end,
 	},
 	{
@@ -57,11 +57,11 @@ return {
 			"neanias/everforest-nvim",
 			priority = 1000,
 			config = function()
-				require("everforest").setup({
-					-- hard, medium, soft
-					everforest_background = "hard",
-					everforest_better_performance = 1,
-				})
+				-- require("everforest").setup({
+				-- 	-- hard, medium, soft
+				-- 	everforest_background = "hard",
+				-- 	everforest_better_performance = 1,
+				-- })
 				-- vim.cmd([[colorscheme everforest]])
 			end,
 		},
@@ -93,6 +93,21 @@ return {
 			-- 		-- soda, pro, ristretto
 			-- 		palette = require("monokai").soda,
 			-- 	})
+		end,
+	},
+	{
+		'f4z3r/gruvbox-material.nvim',
+		name = 'gruvbox-material',
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			require("gruvbox-material").setup({
+				-- set contrast, can be any of "hard", "medium", "soft"
+				contrast = "soft",        
+			})
+			-- "dark" or "light"
+			vim.o.background = "light"
 		end,
 	},
 }

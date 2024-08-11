@@ -5,7 +5,7 @@
 In my development environment, I will install the following plugins:
 
 ```Bash
-:CocInstall @yaegassy/coc-pylsp coc-html-css-support coc-pairs coc-prettier coc-tsserver coc-json coc-emmet coc-markdown-preview-enhanced coc-markdownlint
+:CocInstall @yaegassy/coc-pylsp coc-lua coc-html-css-support coc-pairs coc-prettier coc-tsserver coc-json coc-emmet coc-markdown-preview-enhanced coc-markdownlint
 ```
 
 If the support of Python is not enough, it is necessary to install pylsp server:

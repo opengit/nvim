@@ -5,10 +5,10 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- vim.g.hardhacker_darker = 1
-			-- vim.g.hardhacker_hide_tilde = 1
-			-- vim.g.hardhacker_keyword_italic = 1
-			-- vim.cmd("colorscheme hardhacker")
+			vim.g.hardhacker_darker = 1
+			vim.g.hardhacker_hide_tilde = 1
+			vim.g.hardhacker_keyword_italic = 1
+			vim.cmd("colorscheme hardhacker")
 		end,
 	},
 	{
@@ -62,6 +62,7 @@ return {
 				-- 	everforest_background = "hard",
 				-- 	everforest_better_performance = 1,
 				-- })
+				-- vim.o.background = "dark"
 				-- vim.cmd([[colorscheme everforest]])
 			end,
 		},
@@ -72,7 +73,7 @@ return {
 		config = function()
 			-- onedark, onelight, onedark_vivid, onedark_dark
 			-- vim.cmd("colorscheme onedark_dark")
-			-- vim.cmd("colorscheme onedark")
+			-- vim.cmd("colorscheme onedark_vivid")
 		end,
 	},
 	{
@@ -102,12 +103,13 @@ return {
 		priority = 1000,
 		opts = {},
 		config = function()
-			require("gruvbox-material").setup({
-				-- set contrast, can be any of "hard", "medium", "soft"
-				contrast = "soft",        
-			})
-			-- "dark" or "light"
-			vim.o.background = "light"
+			-- require("gruvbox-material").setup({
+			-- 	-- set contrast, can be any of "hard", "medium", "soft"
+			-- 	contrast = "soft",        
+			-- })
+			-- -- "dark" or "light"
+			-- -- vim.o.background = "light"
+			-- vim.o.background = "dark"
 		end,
 	},
 }

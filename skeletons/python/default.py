@@ -10,8 +10,16 @@
 """
 
 
-from gitopenlib.libs import *
+import os
+import pandas as pd
+import numpy as np
+from tqdm import tqdm
+
 from gitopenlib.utils import basics as gb
+from gitopenlib.utils import files as gf
+from gitopenlib.utils import nlp as gn
+from gitopenlib.utils import wonders as gw
+from gitopenlib.utils import others as go
 
 LOG_ENABLE = True
 

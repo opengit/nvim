@@ -1,6 +1,6 @@
 HOME = os.getenv("HOME")
 
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.cursorline = true
 vim.opt.updatetime = 200
 
@@ -22,15 +22,17 @@ vim.opt.scrolloff = 3
 vim.opt.showmatch = true
 vim.opt.synmaxcol = 300
 vim.opt.laststatus = 3
--- vim.o.guifont = "GoMono Nerd Font:h10:#Bold"
--- vim.o.guifont = "BlexMono Nerd Font Mono:h10"
+------------------------------------------------------
 if vim.loop.os_uname().sysname == "Darwin" then
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
-	vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h12"
+	-- vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h12"
+	vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12"
 else
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
-	vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
+	-- vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
+	vim.o.guifont = "JetBrainsMonoNL Nerd Font:h8"
 end
+------------------------------------------------------
 vim.opt.ttyfast = true -- faster redrawing
 vim.opt.linespace = 0
 
@@ -151,4 +153,9 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_vfx_mode = "ripple"
 	vim.g.neovide_cursor_vfx_particle_lifetime = 1.1
 	vim.g.neovide_cursor_vfx_particle_speed = 12.0
+
+	-- changing fontsize keys
+    vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
+    vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
+    vim.keymap.set({ "n" , "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
 end

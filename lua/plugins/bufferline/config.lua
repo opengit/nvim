@@ -13,8 +13,8 @@ return function()
 				icon = "▎", -- this should be omitted if indicator style is not 'icon'
 				style = "icon",
 			},
-			-- diagnostics = "nvim_lsp",
-			diagnostics_update_in_insert = false,
+			diagnostics = "coc",
+			diagnostics_update_in_insert = true,
 			offsets = {
 				{
 					filetype = "neo-tree",

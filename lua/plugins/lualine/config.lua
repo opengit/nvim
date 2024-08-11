@@ -36,8 +36,11 @@ return function()
 			--theme = vim.g.hardhacker_lualine_theme,
 			theme = "auto",
 			-- component_separators = "",
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
+			-- │
+			-- component_separators = { left = "", right = "" },
+			-- section_separators = { left = "", right = "" },
+			-- component_separators = { left = "│", right = "│" },
+			-- section_separators = { left = "│", right = "│" },
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -52,9 +55,13 @@ return function()
 			},
 		},
 		sections = {
-			lualine_a = { { "mode", separator = { left = "", right = "" }, right_padding = 2 } },
+			-- lualine_a = { { "mode", separator = { left = "", right = "" }, right_padding = 2 } },
+			-- lualine_a = { { "mode", separator = { left = "", right = "│" }, right_padding = 2 } },
+			lualine_a = { { "mode", right_padding = 2 } },
 			lualine_b = {
-				{ "branch", separator = { left = "", right = "" } },
+				-- { "branch", separator = { left = "", right = "" } },
+				-- { "branch", separator = { left = "", right = "│" } },
+				{ "branch" },
 				{ "diff" },
 			},
 			lualine_c = {
@@ -107,8 +114,9 @@ return function()
 				"progress",
 			},
 			lualine_z = {
-				{ "location", separator = { left = "", right = "" }, left_padding = 0 },
-				-- "location",
+				-- { "location", separator = { left = "", right = "" }, left_padding = 0 },
+				-- { "location", separator = { left = "│", right = "│" }, left_padding = 0 },
+				{ "location" },
 				{
 					"diagnostics",
 

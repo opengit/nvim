@@ -2,7 +2,6 @@
 .undo
 .backup
 .swp
-default.py
 
 # some files
 .DS_Store

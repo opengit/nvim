@@ -60,6 +60,6 @@ def main():
 
 if __name__ == "__main__":
     # ### 发送完成WX通知 ###
-    go.sendBotMsg("59ea9346-5fb3-4bee-8748-e64a268ef5a9", func_main=main)
+    go.sendBotMsg("", func_main=main)
     # ### 发送完成WX通知 ###
     pass

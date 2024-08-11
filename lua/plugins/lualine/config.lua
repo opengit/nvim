@@ -61,7 +61,7 @@ return function()
 				{
 					"filename",
 					file_status = true, -- Displays file status (readonly status, modified status)
-					newfile_status = false, -- Display new file status (new file means no write after created)
+					newfile_status = true, -- Display new file status (new file means no write after created)
 					path = 3, -- 0: Just the filename
 					-- 1: Relative path
 					-- 2: Absolute path
@@ -89,22 +89,26 @@ return function()
 				-- {
 				-- 	require("noice").api.status.command.get,
 				-- 	cond = require("noice").api.status.command.has,
-				-- 	color = { fg = "#ff9e64" },
+				-- 	-- color = { fg = "#ff9e64" },
 				-- },
 				-- {
 				-- 	require("noice").api.status.mode.get,
 				-- 	cond = require("noice").api.status.mode.has,
-				-- 	color = { fg = "#ff9e64" },
+				-- 	-- color = { fg = "#ff9e64" },
 				-- },
-				-- {
-				-- 	require("noice").api.status.search.get,
-				-- 	cond = require("noice").api.status.search.has,
-				-- 	color = { fg = "#ff9e64" },
-				-- },
+				{
+					require("noice").api.status.search.get,
+					cond = require("noice").api.status.search.has,
+					-- color = { fg = "#ff9e64" },
+				},
 			},
 			lualine_y = {
 				"%L",
 				"progress",
+			},
+			lualine_z = {
+				{ "location", separator = { left = "", right = "" }, left_padding = 0 },
+				-- "location",
 				{
 					"diagnostics",
 
@@ -112,7 +116,7 @@ return function()
 					--   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
 					-- or a function that returns a table as such:
 					--   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
-					sources = { "nvim_lsp", "nvim_diagnostic" },
+					sources = { "coc", "nvim_lsp", "nvim_diagnostic" },
 
 					-- Displays diagnostics for the defined severity types
 					sections = { "error", "warn", "info", "hint" },
@@ -126,11 +130,10 @@ return function()
 					},
 					symbols = { error = " ", warn = " ", info = " ", hint = " " },
 					colored = false, -- Displays diagnostics status in color if set to true.
-					update_in_insert = false, -- Update diagnostics in insert mode.
+					update_in_insert = true, -- Update diagnostics in insert mode.
 					always_visible = false, -- Show diagnostics even if there are none.
 				},
 			},
-			lualine_z = { { "location", separator = { left = "", right = "" }, left_padding = 0 } },
 		},
 		inactive_sections = {
 			lualine_a = {},

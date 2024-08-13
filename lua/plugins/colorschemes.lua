@@ -105,7 +105,7 @@ return {
 		config = function()
 			-- require("gruvbox-material").setup({
 			-- 	-- set contrast, can be any of "hard", "medium", "soft"
-			-- 	contrast = "soft",        
+			-- 	contrast = "soft",
 			-- })
 			-- -- "dark" or "light"
 			-- -- vim.o.background = "light"

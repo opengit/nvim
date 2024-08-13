@@ -7,7 +7,7 @@ return {
 				indent = {
 					enable = true,
 				},
-				ensure_installed = { "markdown", "markdown_inline", "regex", "python" },
+				ensure_installed = { "markdown", "markdown_inline", "regex", "python", "lua", "vim", "javascript" },
 				sync_install = false,
 				auto_install = true,
 				highlight = {

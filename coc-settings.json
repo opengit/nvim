@@ -57,15 +57,11 @@
     },
     //////////////////////////////////////////////////////////////////////////////////
     // coc-pylsp
-<<<<<<< HEAD
     // "pylsp.builtin.installExtrasArgs": ["all"],
     "pylsp.builtin.enableInstallPythonLspRuff": true,
     "pylsp.plugins.pycodestyle.enabled": false,
     "pylsp.plugins.pyflakes.enabled": false,
     "pylsp.plugins.mccabe.enabled": false,
-=======
-    "pylsp.builtin.installExtrasArgs": ["all"],
->>>>>>> 1f0cc8eebbfad2d18d60bd7ac5bbf689b2b44392
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier
     "prettier.enable": true,

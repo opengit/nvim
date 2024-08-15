@@ -71,6 +71,7 @@
     "typescript.format.enable": false,
     //////////////////////////////////////////////////////////////////////////////////
     // diagnostic
+    "diagnostic.enableSign": true,
     "diagnostic.floatConfig": {
         "border": true,
         "rounded": true,
@@ -97,5 +98,8 @@
     "outline.autoWidth": true,
     "outline.autoPreview": true,
     "outline.expandLevel": 4,
-    "list.source.symbols.defaultArgs": ["all"]
+    "list.source.symbols.defaultArgs": [
+      "all"
+    ],
+    "snippets.ultisnips.pythonPrompt": false
 }

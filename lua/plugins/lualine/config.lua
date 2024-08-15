@@ -12,35 +12,11 @@ return function()
 		comment = "#938aad",
 	}
 
-	local hardhacker_theme = {
-		normal = {
-			a = { fg = colors.black, bg = colors.purple },
-			b = { fg = colors.red, bg = colors.selection },
-			c = { fg = colors.comment, bg = colors.selection },
-		},
-
-		insert = { a = { fg = colors.black, bg = colors.green } },
-		visual = { a = { fg = colors.black, bg = colors.yellow } },
-		replace = { a = { fg = colors.black, bg = colors.red } },
-
-		inactive = {
-			a = { fg = colors.white, bg = colors.selection },
-			b = { fg = colors.white, bg = colors.selection },
-			c = { fg = colors.white, bg = colors.selection },
-		},
-	}
-
 	require("lualine").setup({
 		options = {
 			icons_enabled = true,
-			theme = vim.g.hardhacker_lualine_theme,
 			-- theme = "auto",
-			-- component_separators = "",
-			-- │
-			-- component_separators = { left = "", right = "" },
-			-- section_separators = { left = "", right = "" },
-			-- component_separators = { left = "│", right = "│" },
-			-- section_separators = { left = "│", right = "│" },
+			theme = "dracula-nvim",
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -55,12 +31,8 @@ return function()
 			},
 		},
 		sections = {
-			-- lualine_a = { { "mode", separator = { left = "", right = "" }, right_padding = 2 } },
-			-- lualine_a = { { "mode", separator = { left = "", right = "│" }, right_padding = 2 } },
 			lualine_a = { { "mode", right_padding = 2 } },
 			lualine_b = {
-				-- { "branch", separator = { left = "", right = "" } },
-				-- { "branch", separator = { left = "", right = "│" } },
 				{ "branch" },
 				{ "diff" },
 			},
@@ -69,11 +41,12 @@ return function()
 					"filename",
 					file_status = true, -- Displays file status (readonly status, modified status)
 					newfile_status = true, -- Display new file status (new file means no write after created)
-					path = 3, -- 0: Just the filename
+					-- 0: Just the filename
 					-- 1: Relative path
 					-- 2: Absolute path
 					-- 3: Absolute path, with tilde as the home directory
 					-- 4: Filename and parent dir, with tilde as the home directory
+					path = 3,
 
 					shorting_target = 40, -- Shortens path to leave 40 spaces in the window
 					-- for other components. (terrible name, any suggestions?)
@@ -114,8 +87,6 @@ return function()
 				"progress",
 			},
 			lualine_z = {
-				-- { "location", separator = { left = "", right = "" }, left_padding = 0 },
-				-- { "location", separator = { left = "│", right = "│" }, left_padding = 0 },
 				{ "location" },
 				{
 					"diagnostics",
@@ -124,7 +95,8 @@ return function()
 					--   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
 					-- or a function that returns a table as such:
 					--   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
-					sources = { "coc", "nvim_lsp", "nvim_diagnostic" },
+					-- sources = { "coc", "nvim_lsp", "nvim_diagnostic" },
+					sources = { "coc" },
 
 					-- Displays diagnostics for the defined severity types
 					sections = { "error", "warn", "info", "hint" },

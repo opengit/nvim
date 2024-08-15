@@ -58,18 +58,18 @@ vim.opt.eol = false -- show if there's no eol char
 vim.opt.showbreak = "↪ " -- character to show when line is broken
 
 -- Sidebar
-vim.opt.number = true -- line number on the left
-vim.opt.numberwidth = 3 -- always reserve 3 spaces for line number
+vim.opt.number = true      -- line number on the left
+vim.opt.numberwidth = 3    -- always reserve 3 spaces for line number
 vim.opt.signcolumn = "yes" -- keep 1 column for coc.vim  check
 vim.opt.modelines = 0
-vim.opt.showcmd = false -- display command in bottom bar
+vim.opt.showcmd = false    -- display command in bottom bar
 
 -- Search
-vim.opt.incsearch = true -- starts searching as soon as typing, without enter needed
+vim.opt.incsearch = true  -- starts searching as soon as typing, without enter needed
 vim.opt.ignorecase = true -- ignore letter case when searching
-vim.opt.smartcase = true -- case insentive unless capitals used in search
+vim.opt.smartcase = true  -- case insentive unless capitals used in search
 
-vim.opt.matchtime = 2 -- delay before showing matching paren
+vim.opt.matchtime = 2     -- delay before showing matching paren
 vim.opt.mps = vim.o.mps .. ",<:>"
 
 -- White characters
@@ -101,7 +101,7 @@ vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, { comma
 -- Commands mode
 vim.opt.wildmenu = true -- on TAB, complete options for system command
 vim.opt.wildignore =
-	"deps,.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.DS_Store,*.aux,*.out,*.toc"
+"deps,.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.DS_Store,*.aux,*.out,*.toc"
 
 -- Only show cursorline in the current window and in normal mode.
 vim.cmd([[
@@ -125,7 +125,6 @@ vim.cmd([[
 
 -- neovide
 if vim.g.neovide then
-
 	vim.g.neovide_padding_top = 0
 	vim.g.neovide_padding_bottom = 0
 	vim.g.neovide_padding_right = 0
@@ -155,7 +154,7 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_vfx_particle_speed = 12.0
 
 	-- changing fontsize keys
-    vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
-    vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
-    vim.keymap.set({ "n" , "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
+	vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
+	vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
+	vim.keymap.set({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
 end

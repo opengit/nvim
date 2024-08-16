@@ -5,7 +5,7 @@
 In my development environment, I will install the following plugins:
 
 ```Bash
-:CocInstall @yaegassy/coc-pylsp coc-sumneko-lua coc-html-css-support coc-pairs coc-snippets coc-prettier coc-tsserver coc-json coc-emmet coc-markdown-preview-enhanced coc-markdownlint
+:CocInstall @yaegassy/coc-pylsp coc-sumneko-lua coc-html-css-support coc-pairs coc-snippets coc-prettier coc-tsserver coc-json coc-emmet coc-markdown-preview-enhanced coc-markdownlint coc-webview
 ```
 
 If the support of Python or Lua is not enough, it is necessary to install language server:
@@ -36,3 +36,7 @@ If the support of Python or Lua is not enough, it is necessary to install langua
 -   2024-07-02 01:09
 
 > Python 的支持转为使用`coc-pylsp`。
+
+-   2024-08-16 17:00
+
+> 最近清理了无效配置代码段，添加了`coc-webview`让 markdown-preview-enhanced 工作正常。

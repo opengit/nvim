@@ -15,8 +15,8 @@ return function()
 	require("lualine").setup({
 		options = {
 			icons_enabled = true,
-			-- theme = "auto",
-			theme = "dracula-nvim",
+			theme = "auto",
+			-- theme = "dracula-nvim",
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},

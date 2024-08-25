@@ -33,7 +33,7 @@ return {
 	-- Colors highlighting
 	{
 		"NvChad/nvim-colorizer.lua",
-		config = function(plun)
+		config = function()
 			require("colorizer").setup({
 				user_default_options = {
 					names = true,

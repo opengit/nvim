@@ -26,19 +26,19 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("catppuccin").setup({
-				integrations = {
-					gitsigns = true,
-					nvimtree = true,
-					treesitter = true,
-					notify = true,
-					coc_nvim = true,
-					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-				},
-			})
-			-- latte, frappe, macchiato, mocha
-			vim.g.catppuccin_flavour = "mocha"
-			vim.cmd.colorscheme "catppuccin"
+			-- require("catppuccin").setup({
+			-- 	integrations = {
+			-- 		gitsigns = true,
+			-- 		nvimtree = true,
+			-- 		treesitter = true,
+			-- 		notify = true,
+			-- 		coc_nvim = true,
+			-- 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+			-- 	},
+			-- })
+			-- -- latte, frappe, macchiato, mocha
+			-- vim.g.catppuccin_flavour = "mocha"
+			-- vim.cmd.colorscheme "catppuccin"
 		end,
 	},
 	{
@@ -58,5 +58,31 @@ return {
 			-- vim.o.background = "light"
 			-- vim.cmd [[colorscheme tokyonight-day]]
 		end,
-	}
+	},
+	{
+		'f4z3r/gruvbox-material.nvim',
+		name = 'gruvbox-material',
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			require('gruvbox-material').setup({
+				italics = true,
+				-- set contrast, can be any of "hard", "medium", "soft"
+				contrast = "hard",
+				-- enable italic comments
+				comments = {
+					italics = true,
+				},
+				-- set the background to transparent
+				background = {
+					transparent = false,
+				},
+				-- whether to highlight signs
+				signs = {
+					highlight = true,
+				},
+			})
+		end,
+	},
 }

@@ -28,8 +28,8 @@ return {
 					untracked = { text = "┆" },
 				},
 				signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-				numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
-				linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
+				numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+				linehl = true, -- Toggle with `:Gitsigns toggle_linehl`
 				word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
 				watch_gitdir = {
 					follow_files = true,
@@ -109,8 +109,8 @@ return {
 				cmdline = {
 					enabled = true,
 					-- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
-					view = "cmdline_popup",
-					-- view = "cmdline",
+					-- view = "cmdline_popup",
+					view = "cmdline",
 				},
 				-- you can enable a preset for easier configuration
 				presets = {

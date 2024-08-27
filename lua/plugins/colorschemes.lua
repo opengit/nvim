@@ -12,77 +12,39 @@ return {
 		end,
 	},
 	{
-		"luisiacc/gruvbox-baby",
+		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			-- vim.g.gruvbox_baby_background_color = "dark"
-			-- vim.g.gruvbox_baby_background_color = "medium"
-			-- vim.cmd [[colorscheme gruvbox-baby]]
-		end,
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			-- require("catppuccin").setup({
-			-- 	integrations = {
-			-- 		gitsigns = true,
-			-- 		nvimtree = true,
-			-- 		treesitter = true,
-			-- 		notify = true,
-			-- 		coc_nvim = true,
-			-- 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-			-- 	},
+			-- require("gruvbox").setup({
+			-- 	-- invert background for search, diffs, statuslines and errors
+			-- 	inverse = true,
+			-- 	-- can be "hard", "soft" or empty string
+			-- 	contrast = "soft",
 			-- })
-			-- -- latte, frappe, macchiato, mocha
-			-- vim.g.catppuccin_flavour = "mocha"
-			-- vim.cmd.colorscheme "catppuccin"
+			-- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
-		"folke/tokyonight.nvim",
+		'sainnhe/gruvbox-material',
 		lazy = false,
 		priority = 1000,
-		opts = {},
 		config = function()
-			-- -----------------------------------------
-			-- dark
-			-- vim.cmd [[colorscheme tokyonight]]
-			-- vim.cmd [[colorscheme tokyonight-night]]
-			-- vim.cmd [[colorscheme tokyonight-storm]]
-			-- vim.cmd [[colorscheme tokyonight-moon]]
-			-- -----------------------------------------
-			-- light
-			-- vim.o.background = "light"
-			-- vim.cmd [[colorscheme tokyonight-day]]
-		end,
+			-- vim.g.gruvbox_material_enable_italic = true
+			-- vim.g.gruvbox_material_better_performance = 1
+			-- -- 'hard', 'medium', 'soft'
+			-- vim.g.gruvbox_material_background = 'soft'
+			-- -- material, mix, original
+			-- vim.g.gruvbox_material_foreground = 'material'
+			-- vim.cmd.colorscheme('gruvbox-material')
+		end
 	},
 	{
-		'f4z3r/gruvbox-material.nvim',
-		name = 'gruvbox-material',
+		'Mofiqul/dracula.nvim',
 		lazy = false,
 		priority = 1000,
-		opts = {},
 		config = function()
-			require('gruvbox-material').setup({
-				italics = true,
-				-- set contrast, can be any of "hard", "medium", "soft"
-				contrast = "hard",
-				-- enable italic comments
-				comments = {
-					italics = true,
-				},
-				-- set the background to transparent
-				background = {
-					transparent = false,
-				},
-				-- whether to highlight signs
-				signs = {
-					highlight = true,
-				},
-			})
-		end,
-	},
+			-- vim.cmd [[colorscheme dracula]]
+			vim.cmd [[colorscheme dracula-soft]]
+		end
+	}
 }

@@ -116,7 +116,7 @@ vim.cmd([[
 
 vim.cmd([[
     set noeb
-    set t_Co=256
+    " set t_Co=256
     filetype    plugin indent on
     exec        "nohlsearch"
     syntax      enable
@@ -158,6 +158,18 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_vfx_mode = "ripple"
 	vim.g.neovide_cursor_vfx_particle_lifetime = 1.1
 	vim.g.neovide_cursor_vfx_particle_speed = 12.0
+
+	vim.g.neovide_theme = "dark"
+
+	-- floating window
+	vim.g.neovide_floating_shadow = true
+	vim.g.neovide_floating_z_height = 10
+	vim.g.neovide_light_angle_degrees = 45
+	vim.g.neovide_light_radius = 5
+
+
+	-- show confirmation dialog
+	vim.g.neovide_confirm_quit = true
 
 	-- changing fontsize keys
 	vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")

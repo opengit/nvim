@@ -1,9 +1,9 @@
 return {
-	file_explorer_title = "🥷 File Explorer",
-	tab_style = "thick",    -- options: thin, thick, slope, slant
-	terminal_size = 0.7,    -- control the float terminal only
+	-- control the float terminal only
+	terminal_size = 0.7,
 	window_transparency = 0,
-	auto_open_outline = false, -- options: true, false
+	-- options: true, false
+	auto_open_outline = false,
 
 	-- Starting screen header.
 	home_header = {

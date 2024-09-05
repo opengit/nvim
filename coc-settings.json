@@ -62,6 +62,7 @@
     "pylsp.plugins.pycodestyle.enabled": false,
     "pylsp.plugins.pyflakes.enabled": false,
     "pylsp.plugins.mccabe.enabled": false,
+    "pylsp.plugins.ruff.enabled": true,
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier
     "prettier.enable": true,
@@ -98,8 +99,6 @@
     "outline.autoWidth": true,
     "outline.autoPreview": true,
     "outline.expandLevel": 4,
-    "list.source.symbols.defaultArgs": [
-      "all"
-    ],
+    "list.source.symbols.defaultArgs": ["all"],
     "snippets.ultisnips.pythonPrompt": false
 }

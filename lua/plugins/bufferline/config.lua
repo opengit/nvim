@@ -13,11 +13,11 @@ return function()
 			-- 	icon = "▎", -- this should be omitted if indicator style is not 'icon'
 			-- 	style = "icon",
 			-- },
-			-- diagnostics = "coc",
-			-- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-			-- 	local icon = level:match("error") and " " or " "
-			-- 	return " " .. icon .. count
-			-- end,
+			diagnostics = "coc",
+			diagnostics_indicator = function(count, level, diagnostics_dict, context)
+				local icon = level:match("error") and " " or " "
+				return " " .. icon .. count
+			end,
 			offsets = {
 				{
 					filetype = "neo-tree",
@@ -32,7 +32,7 @@ return function()
 			hover = {
 				enabled = true,
 				delay = 100,
-				reveal = { "close" },
+				reveal = {},
 			},
 		},
 	})

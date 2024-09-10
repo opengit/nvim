@@ -31,8 +31,8 @@ return {
 		config = function()
 			-- vim.g.gruvbox_material_enable_italic = true
 			-- vim.g.gruvbox_material_better_performance = 1
-			-- -- 'hard', 'medium', 'soft'
-			-- vim.g.gruvbox_material_background = 'hard'
+			-- 'hard', 'medium', 'soft'
+			-- vim.g.gruvbox_material_background = 'medium'
 			-- -- material, mix, original
 			-- vim.g.gruvbox_material_foreground = 'material'
 			-- vim.cmd.colorscheme('gruvbox-material')

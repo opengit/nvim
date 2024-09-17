@@ -28,14 +28,14 @@ if vim.loop.os_uname().sysname == "Darwin" then
 	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h12"
-	vim.o.guifont = "IosevkaTerm Nerd Font Mono:h12"
+	vim.o.guifont = "IosevkaTerm Nerd Font:h12"
 else
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
 	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h8"
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h9"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
-	vim.o.guifont = "IosevkaTerm Nerd Font Mono:h9"
+	vim.o.guifont = "IosevkaTerm Nerd Font:h9"
 end
 ------------------------------------------------------
 vim.opt.ttyfast = true -- faster redrawing
@@ -59,7 +59,6 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldnestmax = 10 -- 10 nested fold max
 vim.opt.wrap = false --do not wrap lines even if very long
 vim.opt.eol = false -- show if there's no eol char
--- vim.opt.showbreak = "↪" -- character to show when line is broken
 vim.opt.showbreak = "↪ " -- character to show when line is broken
 
 -- Sidebar
@@ -67,14 +66,14 @@ vim.opt.number = true      -- line number on the left
 vim.opt.numberwidth = 3    -- always reserve 3 spaces for line number
 vim.opt.signcolumn = "yes" -- keep 1 column for coc.vim  check
 vim.opt.modelines = 0
-vim.opt.showcmd = false    -- display command in bottom bar
+vim.opt.showcmd = true     -- display command in bottom bar
 
 -- Search
 vim.opt.incsearch = true  -- starts searching as soon as typing, without enter needed
 vim.opt.ignorecase = true -- ignore letter case when searching
 vim.opt.smartcase = true  -- case insentive unless capitals used in search
 
-vim.opt.matchtime = 2     -- delay before showing matching paren
+vim.opt.matchtime = 2     -- delay before showing matching parentheses
 vim.opt.mps = vim.o.mps .. ",<:>"
 
 -- White characters
@@ -130,13 +129,21 @@ vim.cmd([[
 
 -- set title to window name
 vim.opt.title = true
-vim.o.titlestring = "%{expand('%:t')} - nvim - %{getpid()}"
+-- vim.o.titlestring = "%{expand('%:t')} - nvim - %{getpid()}"
+vim.o.titlestring = '%<%F%=%l/%L - nvim - %{getpid()}'
+vim.o.titlelen = 70
 
 -- Allow clipboard copy paste in neovim
 vim.api.nvim_set_keymap('', '<C-S-v>', '+p<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('!', '<C-S-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<C-S-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-S-v>', '<C-R>+', { noremap = true, silent = true })
+
+-- change :wq to :w
+vim.cmd.cnoreabbrev('wq w')
+vim.cmd.cnoreabbrev('q w')
+vim.cmd.cnoreabbrev('qq q')
+
 
 -- neovide
 if vim.g.neovide then
@@ -147,28 +154,27 @@ if vim.g.neovide then
 
 	vim.g.neovide_confirm_quit = true
 	vim.g.neovide_remember_window_size = true
-	vim.g.neovide_theme = "auto"
+	vim.g.neovide_theme = "dark"
 	vim.g.neovide_unlink_border_highlights = false
 
 	vim.g.neovide_refresh_rate = 60
-	vim.g.neovide_refresh_rate_idle = 30
+	vim.g.neovide_refresh_rate_idle = 60
 
-	vim.g.neovide_scroll_animation_length = 0.1
+	vim.g.neovide_scroll_animation_length = 0.2
 	vim.g.neovide_scroll_animation_far_lines = 1
 
-	vim.g.neovide_cursor_animation_length = 0.05
+	vim.g.neovide_cursor_animation_length = 0.1
 	vim.g.neovide_cursor_trail_size = 0.2
 	vim.g.neovide_cursor_antialiasing = true
 
 	vim.g.neovide_cursor_animate_in_insert_mode = true
 	vim.g.neovide_cursor_animate_command_line = true
 
-	-- vim.g.neovide_cursor_vfx_mode = "pixiedust"
-	vim.g.neovide_cursor_vfx_mode = "ripple"
+	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+	-- vim.g.neovide_cursor_vfx_mode = "ripple"
 	vim.g.neovide_cursor_vfx_particle_lifetime = 1.1
 	vim.g.neovide_cursor_vfx_particle_speed = 12.0
 
-	vim.g.neovide_theme = "dark"
 
 	-- floating window
 	vim.g.neovide_floating_shadow = true

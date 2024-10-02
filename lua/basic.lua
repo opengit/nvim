@@ -28,14 +28,16 @@ if vim.loop.os_uname().sysname == "Darwin" then
 	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h12"
-	vim.o.guifont = "IosevkaTerm Nerd Font:h12"
+	-- vim.o.guifont = "IosevkaTerm Nerd Font:h12"
+	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h10"
 else
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
 	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h8"
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h9"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
-	vim.o.guifont = "IosevkaTerm Nerd Font:h9"
+	-- vim.o.guifont = "IosevkaTerm Nerd Font:h9"
+	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h10"
 end
 ------------------------------------------------------
 vim.opt.ttyfast = true -- faster redrawing
@@ -141,7 +143,7 @@ vim.api.nvim_set_keymap('v', '<C-S-v>', '<C-R>+', { noremap = true, silent = tru
 
 -- change :wq to :w
 vim.cmd.cnoreabbrev('wq w')
-vim.cmd.cnoreabbrev('q w')
+vim.cmd.cnoreabbrev('q <CR>')
 vim.cmd.cnoreabbrev('qq q')
 
 

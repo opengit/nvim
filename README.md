@@ -1,5 +1,21 @@
 # ReadMe
 
+## Installation
+
+In Windows:
+
+```powershell
+cd ~\AppData\Local\
+git clone https://github.com/opengit/nvim.git
+```
+
+In Linux or macOS:
+
+```bash
+cd ~/.config/
+git clone https://github.com/opengit/nvim.git
+```
+
 ## My neovim configuration
 
 In my development environment, I will install the following plugins:
@@ -40,3 +56,20 @@ If the support of Python or Lua is not enough, it is necessary to install langua
 -   2024-08-16 17:00
 
 > 最近清理了无效配置代码段，添加了`coc-webview`让 markdown-preview-enhanced 工作正常。
+
+## FAQ
+
+1. Error: `Vim(source):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.`.
+
+In Windows:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install mingw -y
+```
+
+In Linux(Ubuntu):
+
+```bash
+sudo apt-get install build-essential
+```

@@ -63,6 +63,8 @@
     "pylsp.plugins.pyflakes.enabled": false,
     "pylsp.plugins.mccabe.enabled": false,
     "pylsp.plugins.ruff.enabled": true,
+    "pylsp.plugins.ruff.formatEnabled": true,
+    "pylsp.plugins.ruff.ignore": ["F401"],
     //////////////////////////////////////////////////////////////////////////////////
     // coc-prettier
     "prettier.enable": true,

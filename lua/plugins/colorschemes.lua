@@ -52,21 +52,20 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- require('onedark').setup {
-			-- 	-- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-			-- 	style = 'dark'
-			-- }
-			-- require('onedark').load()
+			require('onedark').setup {
+				-- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+				style = 'deep'
+			}
+			require('onedark').load()
 		end
 	},
-	-- Lazy
 	{
 		"olimorris/onedarkpro.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			-- onedark, onelight, onedark_vivid, onedark_dark
-			vim.cmd("colorscheme onedark_dark")
+			-- vim.cmd("colorscheme onedark_vivid")
 		end
 	}
 

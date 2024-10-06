@@ -43,8 +43,31 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd [[colorscheme dracula]]
+			-- vim.cmd [[colorscheme dracula]]
 			-- vim.cmd [[colorscheme dracula-soft]]
 		end
+	},
+	{
+		'navarasu/onedark.nvim',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			-- require('onedark').setup {
+			-- 	-- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+			-- 	style = 'dark'
+			-- }
+			-- require('onedark').load()
+		end
+	},
+	-- Lazy
+	{
+		"olimorris/onedarkpro.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			-- onedark, onelight, onedark_vivid, onedark_dark
+			vim.cmd("colorscheme onedark_dark")
+		end
 	}
+
 }

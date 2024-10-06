@@ -29,7 +29,7 @@ if vim.loop.os_uname().sysname == "Darwin" then
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h12"
 	-- vim.o.guifont = "IosevkaTerm Nerd Font:h12"
-	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h10"
+	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
 else
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h8"
 	-- vim.o.guifont = "CaskaydiaCove Nerd Font Propo:h8"
@@ -37,7 +37,7 @@ else
 	-- vim.o.guifont = "Sarasa Fixed Slab SC Nerd Font:h9"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
 	-- vim.o.guifont = "IosevkaTerm Nerd Font:h9"
-	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h10"
+	vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
 end
 ------------------------------------------------------
 vim.opt.ttyfast = true -- faster redrawing

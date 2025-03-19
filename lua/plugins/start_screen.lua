@@ -13,10 +13,10 @@ return {
 			dashboard.section.header.opts.hl = "HardHackerRed"
 
 			-- footer
-			local handle = io.popen("fortune")
-			local fortune = handle:read("*a")
-			handle:close()
-			dashboard.section.footer.val = fortune
+			-- local handle = io.popen("fortune")
+			-- local fortune = handle:read("*a")
+			-- handle:close()
+			dashboard.section.footer.val = "Talk is	cheap. Show me the code."
 
 			-- button
 			local create_button = function(key, desc, action)

@@ -24,22 +24,11 @@ vim.opt.synmaxcol = 300
 vim.opt.laststatus = 3
 ------------------------------------------------------
 if vim.loop.os_uname().sysname == "Darwin" then
-	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
-	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12"
 	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
-	-- vim.o.guifont = "IosevkaTerm Nerd Font:h9"
-	-- vim.o.guifont = "IosevkaTerm NF:h9"
-	-- vim.opt.guifont = { "IosevkaTerm NF", ":h9:b" }
-	-- vim.opt.guifont = { "CaskaydiaCove Nerd Font Mono", ":h9" }
-	vim.opt.guifont = { "JetBrainsMonoNL Nerd Font", ":h9:b" }
+	-- vim.opt.guifont = { "JetBrainsMonoNL Nerd Font", ":h9:b" }
+	vim.opt.guifont = { "CodeNewRoman Nerd Font Mono", ":h9:b" }
 else
-	-- vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h12"
-	-- vim.o.guifont = "JetBrainsMonoNL Nerd Font:h12"
-	-- vim.o.guifont = "Sarasa Fixed SC Nerd Font:h9"
-	-- vim.o.guifont = "IosevkaTerm Nerd Font Bold:h9"
-	-- vim.opt.guifont = { "IosevkaTerm NF", ":h9:b" }
-	-- vim.opt.guifont = { "CaskaydiaCove Nerd Font Mono", ":h9" }
-	vim.opt.guifont = { "JetBrainsMonoNL Nerd Font", ":h9:b" }
+	vim.opt.guifont = { "CodeNewRoman Nerd Font Mono", ":h9:b" }
 end
 ------------------------------------------------------
 vim.opt.ttyfast = true -- faster redrawing

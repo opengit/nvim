@@ -31,6 +31,12 @@ If the support of Python or Lua is not enough, it is necessary to install langua
 :CocCommand sumneko-lua.install
 ```
 
+To use the GitHub Copilot plugin for AI coding, you need to set up the `github/copilot.vim` plugin by the following command:
+
+```Bash
+:Copilot setup
+```
+
 ## Screenshots
 
 ![start-screen](./docs/images/start-screen.png)
@@ -56,6 +62,10 @@ If the support of Python or Lua is not enough, it is necessary to install langua
 - 2024-08-16 17:00
 
 > 最近清理了无效配置代码段，添加了`coc-webview`让 markdown-preview-enhanced 工作正常。
+
+- 2025-06-08 18:02
+
+> 使用 `github/copilot.vim` 插件代替 `codeium` 作为 AI 编程助手。
 
 ## FAQ
 

@@ -1,19 +1,20 @@
 return {
 	-- --------------------------------------------------------------------------------------------------------------
-	{
-		"stevearc/aerial.nvim",
-		config = function()
-			require("aerial").setup({
-				filter_kind = false,
-				-- optionally use on_attach to set keymaps when aerial has attached to a buffer
-				on_attach = function(bufnr)
-					-- Jump forwards/backwards with '{' and '}'
-					vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
-					vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
-				end,
-			})
-		end,
-	},
+	-- this plugin has been configured in view.lua.
+	-- {
+	-- 	"stevearc/aerial.nvim",
+	-- 	config = function()
+	-- 		require("aerial").setup({
+	-- 			filter_kind = false,
+	-- 			-- optionally use on_attach to set keymaps when aerial has attached to a buffer
+	-- 			on_attach = function(bufnr)
+	-- 				-- Jump forwards/backwards with '{' and '}'
+	-- 				vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+	-- 				vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- },
 	-- --------------------------------------------------------------------------------------------------------------
 	{
 		"github/copilot.vim",
@@ -172,6 +173,7 @@ return {
 		end,
 	},
 	-- --------------------------------------------------------------------------------------------------------------
+	-- friendly snippets
 	{ "rafamadriz/friendly-snippets" },
 	-- --------------------------------------------------------------------------------------------------------------
 	-- auto-tag
@@ -201,6 +203,9 @@ return {
 			}
 		end,
 	},
+	-- --------------------------------------------------------------------------------------------------------------
+	-- diffview
+	{ 'sindrets/diffview.nvim' },
 	-- --------------------------------------------------------------------------------------------------------------
 	-- Others
 }

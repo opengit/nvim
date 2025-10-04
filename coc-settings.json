@@ -1,7 +1,22 @@
 {
     //////////////////////////////////////////////////////////////////////////////////
     // normal
-    "coc.preferences.extensionUpdateCheck": "daily",
+    "extensions.updateCheck": "daily",
+    "extensions.recommendations": [
+        "coc-pylsp",
+        "coc-sumneko-lua",
+        "coc-html-css-support",
+        "coc-pairs",
+        "coc-snippets",
+        "coc-prettier",
+        "coc-tsserver",
+        "coc-json",
+        "coc-emmet",
+        "coc-markdown-preview-enhanced",
+        "coc-markdownlint",
+        "coc-webview",
+        "coc-git"
+    ],
     "coc.preferences.messageLevel": "error",
     "coc.preferences.enableMarkdown": false,
     "coc.preferences.formatOnSave": true,
